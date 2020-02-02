@@ -1,2 +1,2 @@
-B#!/bin/bash
-find -empty -printf '%f\n'
+#!/bin/bash
+find -empty -print | tr -d ../
