@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type f -name "*.gif" -printf '%f\n' | sort -fV | tr -d '*.gif'
+find -type f -name "*.gif" -printf '%f\n' | sort -fV | rev | cut -f 2- -d "." | rev  
