@@ -1,0 +1,2 @@
+#!/bin/bash
+nl -n | grep '[[:digit:]]*[13579]' | cut -f2
