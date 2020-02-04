@@ -1,2 +1,2 @@
 #!/bin/bash
-nl -nrz | grep '^[[:digit:]]*[13579]' | cut -f2
+nl -nrz | grep '^[[:digit:]]*[13579]\b' | cut -f2
