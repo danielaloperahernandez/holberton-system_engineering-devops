@@ -10,7 +10,7 @@ do
     echo $i
     case $i in
         4)
-	        echo bad luck from Chsheina
+	        echo bad luck from China
 	        ;;
         9)
 	        echo bad luck from Japan
