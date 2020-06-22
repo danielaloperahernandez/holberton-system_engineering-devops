@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Manage demond process
+file=/var/run/my_process.pid
+if [ "$1" = "start" ]; then
+	./manage_my_process &
+	echo "$!" > "$file"
+	echo manage_my_process started
+elif [ "$1" = "stop" ]; then
+	pkill --signal 9 -f manage_my_process
+	rm "$file"
+	echo manage_my_process stopped
+elif [ "$1" = "restart" ]; then
+	pkill --signal 9 -f manage_my_process
+	rm "$file"
+	./manage_my_process &
+	echo "$!" > "$file"
+	echo manage_my_process restarted
+else
+	echo "Usage: manage_my_process {start|stop|restart}"
+fi
