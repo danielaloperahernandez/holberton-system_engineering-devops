@@ -6,11 +6,11 @@ if [ "$1" = "start" ]; then
 	echo "$!" > "$file"
 	echo manage_my_process started
 elif [ "$1" = "stop" ]; then
-	pkill --signal 9 -f manage_my_process
+	pkill -SIGKILL -f ./manage_my_process
 	rm "$file"
 	echo manage_my_process stopped
 elif [ "$1" = "restart" ]; then
-	pkill --signal 9 -f manage_my_process
+	pkill -SIGKILL -f ./manage_my_process
 	rm "$file"
 	./manage_my_process &
 	echo "$!" > "$file"
