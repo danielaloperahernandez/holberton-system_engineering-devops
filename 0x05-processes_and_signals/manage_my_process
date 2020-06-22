@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# Bash script
-file=/tmp/my_process
+# Bash script Daemon process
 while true
 do
-	echo I am alive! >> "$file"
+	echo I am alive! >> /tmp/my_process
 	sleep 2
 done
