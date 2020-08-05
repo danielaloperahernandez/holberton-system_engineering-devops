@@ -17,8 +17,8 @@ printf %s "server {
 		 return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
 	 }
 
-	 error_page 404/404.html;
-	 location = /404 {
+	 error_page 404 /404.html;
+     location /404 {
 		 root /etc/nginx/html;
 		 internal;
 	 }
