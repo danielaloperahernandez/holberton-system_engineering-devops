@@ -2,4 +2,4 @@
 # Script changes config nginx
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
-sudo kill -s quit "$( cat /var/run/nginx.pid )"
+rm /run/nginx.pid
