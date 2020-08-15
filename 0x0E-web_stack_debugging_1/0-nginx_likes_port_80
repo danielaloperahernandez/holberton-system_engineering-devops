@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script changes config
+sed -i 's/8080/80/g' /etc/nginx/sites-enable/default
+sudo service nginx restart
