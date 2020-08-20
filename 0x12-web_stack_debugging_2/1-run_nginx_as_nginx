@@ -2,5 +2,6 @@
 # restart nginx runnig as user nginx on port 8080
 chmod 777 /etc/nginx/nginx.conf
 pkill apache2
+sleep 3
 sed -i 's/80/8080/g' /etc/nginx/sites-enable/default
 sudo -u nginx service nginx start
